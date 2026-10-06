@@ -1,55 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <meta charset="UTF-8">
     <title>Contact Me</title>
 </head>
 
 <body>
 
     <header>
-        <h1>Contact Me</h1>
+        <h1>Alex's Portfolio</h1>
+        <p>Personal website of a beginner web developer from Plovdiv.</p>
 
         <nav>
             <a href="index.html">Home</a> |
             <a href="about.html">About Me</a> |
             <a href="skills.html">Skills</a> |
+            <a href="projects.html">Projects</a> |
             <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main>
-        <h2>Get In Touch</h2>
-
-        <p>Email: alex@email.com</p>
-        <p>Phone: +123 456 789</p>
-        <p>Location: Plovdiv</p>
-
-        <h3>Send Me a Message</h3>
+        <section>
+            <h2>Get In Touch</h2>
+            <p>Email: alex@email.com</p>
+            <p>Phone: +123 456 789</p>
+            <p>Location: Plovdiv</p>
+        </section>
 
         <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
+            <fieldset>
+                <legend>Your Details</legend>
 
-            <br><br>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
+                <br><br>
 
-            <br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
 
-            <label for="message">Message:</label>
+                <br><br>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject">
+            </fieldset>
+
+            <fieldset>
+                <legend>Your Message</legend>
+
+                <label for="type">Type of inquiry:</label>
+                <select id="type" name="type">
+                    <option>Question</option>
+                    <option>Project offer</option>
+                    <option>Feedback</option>
+                </select>
+
+                <br><br>
+
+                <input type="radio" id="byemail" name="reply" value="email" checked>
+                <label for="byemail">Reply by email</label>
+                <input type="radio" id="byphone" name="reply" value="phone">
+                <label for="byphone">Reply by phone</label>
+
+                <br><br>
+
+                <label for="message">Message:</label>
+                <br>
+                <textarea id="message" name="message" rows="5" cols="30"></textarea>
+            </fieldset>
+
             <br>
-            <textarea id="message" name="message" rows="5" cols="30"></textarea>
-
-            <br><br>
-
-            <input type="submit" value="Send">
+            <button type="submit">Send</button>
         </form>
     </main>
 
     <footer>
-        <p>Alex 2026</p>
+        <p>Alex, Plovdiv 2026</p>
     </footer>
 
 </body>
